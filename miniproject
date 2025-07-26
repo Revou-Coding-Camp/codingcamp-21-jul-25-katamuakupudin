@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - katamuakupudin</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="css\style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <main>
+        <!-- Title -->
+        <header>
+            <h1 class="text-3xl font-bold text-center mt-10">Todo List</h1>
+        </header>
+
+        <!-- Form Todo List -->
+        <form>
+            <div>
+                <label for="todo-input" class="block text-sm font-medium text-gray-700">Add a new task:</label>
+                <input type="text" id="todo-input" 
+                class="mt-2 p-2 border border-gray-300 rounded w-full focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
+                placeholder="Enter your task here...">
+            </div>
+
+            <div>
+                <label for="todo-input" class="block text-sm font-medium text-gray-700">Date:</label>
+                <input type="Date" id="date-input" 
+                class="mt-2 p-2 border border-gray-300 rounded w-full focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
+                placeholder="Enter your task here...">
+            </div>
+
+            <div>
+                <button type="button" class="border px-[26px] py-[6px] rounded-[9px] border-black-100 bg-green-400 text-black" 
+                onclick="addTask()">+</button>
+            </div>
+        </form>
+
+        <!-- List Todo -->
+         <section>
+            <div class="action-container pt-[16px] pb-[16px]">
+                <button class="border px-[26px] py-[6px] rounded-[9px] border-black-100 bg-blue-200 text-black">Filter</button>
+                <button type="button" class="border px-[26px] py-[6px] rounded-[9px] border-black-100 bg-purple-200 text-black" 
+                    onclick="removedAllTask();">Delete All</button>
+            </div>
+
+        <header>
+            <h2 class="text-1xl font-bold">Task List</h2>
+        </header>
+
+            <div id="todo-list">
+                <p>No Task Available</p>
+            </div>
+         </section>
+    </main>
+
+    <!-- Javascript External -->
+    <script src="js\script.js"></script>
+
+</body>
+</html>
